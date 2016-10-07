@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/mavenlink/brainstem.git
+  revision: ec16295fea9b1841beb6bfbc1a5eee2fffa05bb5
+  branch: master
+  specs:
+    brainstem (1.0.0.pre)
+      activerecord (>= 3.2)
+      activesupport (>= 4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
