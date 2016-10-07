@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Doctors</h1>
+  <%= link_to 'Add a Doctor', new_doctor_path %> |
+  <%= link_to 'Back', root_path %>
+  <div class="row">
+    <% @doctors.each do |d| %>
+      <div class="col s6">
+        <h4><%= d.full_name %></h4>
+        <h5><%= d.doctor_category.name %></h5>
+        <h5><%= d.practice_name %></h5>
+        <h5><%= d.address %></h5>
+        <h5><%= d.phone %></h5>
+        <a href="<%= d.websiteURL %>" target="_blank"><%= d.website %></a>
+        <h5><%= d.rating %></h5>
+        <p><%= d.review %></p>
+        <%= link_to 'edit', edit_doctor_path(d) %> |
+        <%= link_to 'delete', doctor_path(d), method: :delete, data: { confirm: 'Are you sure?'} %>
+      </div>
+    <% end %>
+  </div>
+</div>
