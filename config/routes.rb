@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  scope "api/v1", as: "api_v1" do
+    resources :doctors, controller: 'api/v1/doctors', only: :index
+  end
 
   resources :restaurants
   resources :cuisines
