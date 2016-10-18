@@ -28,6 +28,16 @@ var config = module.exports = {
     // modulesDirectories: ['node_modules', 'bower_components']
   },
 
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel?presets[]=es2015'
+      }
+    ]
+  },
+
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',

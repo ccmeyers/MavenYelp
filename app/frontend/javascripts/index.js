@@ -1,16 +1,16 @@
 require('expose?$!expose?jQuery!jquery');
 
-$(document).ready(function() {
-  $('.doctors-index-btn').on('click', function(e) {
+$(document).ready(() => {
+  $('.doctors-index-btn').on('click', e => {
     e.preventDefault();
     $.ajax({
       method: 'GET',
       dataType: 'json',
       url: '/api/v1/doctors'
-    }).done(function(response) {
+    }).done(response => {
       console.log('here are your doctors');
       console.log(response);
-    }).fail(function(response) {
+    }).fail(response => {
       console.log(response);
     });
   });
