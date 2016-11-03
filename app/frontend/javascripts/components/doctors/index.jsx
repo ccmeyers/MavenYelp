@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import DoctorsList from './doctors-list';
 
 const container = () => document.getElementById('doctors-react-container');
 
 const render = () => {
   ReactDOM.render((
-    <h1>Doctors</h1>
+    <div className="doctors">
+      <DoctorsList />
+    </div>
   ), container());
 }
 
