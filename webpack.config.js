@@ -26,6 +26,9 @@ var config = module.exports = {
     // by default, webpack will search in 'web_modules' and 'node_modules'.
     // If you are using Bower, you want it to look in there too
     // modulesDirectories: ['node_modules', 'bower_components']
+    alias: {
+     'brainstem-js': path.resolve('node_modules/brainstem-js'),
+   },
   },
 
   module: {

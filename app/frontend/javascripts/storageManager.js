@@ -1,5 +1,5 @@
-var StorageManager = require('brainstem-js').StorageManager;
-var Doctors = require('./doctor-collection');
+import { StorageManager } from 'brainstem-js';
+import Doctors from './doctor-collection';
 
-var storageManager = StorageManager.get();
+const storageManager = StorageManager.get();
 storageManager.addCollection('doctors', Doctors);

@@ -1,9 +1,9 @@
-var BrainstemCollection = require('brainstem-js').Collection;
-var Doctor = require('./doctor.js');
+import { Collection } from 'brainstem-js';
+import Doctor from './doctor.js';
 
-var Doctors = BrainstemCollection.extend({
+const Doctors = Collection.extend({
   model: Doctor,
   url: '/api/v1/doctors',
 });
 
-module.exports = Doctors;
+export default Doctors;

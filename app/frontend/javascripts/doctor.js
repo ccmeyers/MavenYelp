@@ -1,9 +1,9 @@
-var BrainstemModel = require('brainstem-js').Model;
+import { Model } from 'brainstem-js';
 
-var Doctor = BrainstemModel.extend({
+const Doctor = Model.extend({
   paramRoot: 'doctor',
   brainstemKey: 'doctors',
   urlRoot: '/api/v1/doctors',
 });
 
-module.exports = Doctor;
+export default Doctor;
