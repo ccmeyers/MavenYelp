@@ -2,13 +2,9 @@ import DoctorsList from '../components/doctors-list';
 import { connect } from 'react-redux';
 import { collectionActions } from 'brainstem-redux';
 
-const mapStateToProps = (store) => {
-  const doctors = store.brainstem.doctors;
-
-  return {
-    doctors: doctors,
-  }
-};
+const mapStateToProps = (store) => ({
+  doctors: store.brainstem.doctors
+});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchDoctors: () => {

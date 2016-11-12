@@ -1,5 +1,5 @@
-import initDoctors from './components/doctors/index';
 import './storageManager';
+import initDoctors from './components/doctors/index';
 
 function ready(fn) {
   if (document.readyState !== 'loading') {

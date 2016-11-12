@@ -12,7 +12,7 @@ const logger = store => next => action => {
   return result;
 };
 
-const middlewares = applyMiddleware(thunkMiddleware, updateStorageManager, logger);
+const middlewares = applyMiddleware(thunkMiddleware, updateStorageManager);
 
 const store = createStore(appReducer, middlewares);
 
