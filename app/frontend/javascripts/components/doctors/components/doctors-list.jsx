@@ -1,4 +1,5 @@
 import React from 'react';
+import Doctor from './doctor';
 
 class DoctorsList extends React.Component {
   componentWillMount() {
@@ -7,12 +8,17 @@ class DoctorsList extends React.Component {
 
 
   render() {
-    const doctors = Object.keys(this.props.doctors);
-    console.log(doctors);
+    const doctorsObj = this.props.doctors;
+    const doctorsArray = [];
+    for(const item in doctorsObj){
+      doctorsArray.push(doctorsObj[item]);
+    }
+    const doctors = doctorsArray.map(doctor => <Doctor key={doctor.id} {...doctor}/>);
+
     return (
       <div className="doctors-list">
         <h3>All Doctors:</h3>
-        <p>{doctors}</p>
+        {doctors}
       </div>
     )
   }
